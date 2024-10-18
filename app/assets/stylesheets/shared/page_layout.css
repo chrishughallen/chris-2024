@@ -1,0 +1,26 @@
+main {
+  margin-block: var(--spacing-xl);
+  max-width: 120ch;
+  margin-inline: auto;
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 0.0625rem solid rgba(0,0,0,0.1);
+
+  & > .title {
+    margin-bottom: var(--spacing-sm);
+    font-size: 48px;
+  }
+
+  & > p {
+    font-size: 20px;
+    max-width: 70ch;
+    text-wrap: pretty;
+
+    &:not(last-child){
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+}
+
+.signature {
+  font-weight: bold;
+}
