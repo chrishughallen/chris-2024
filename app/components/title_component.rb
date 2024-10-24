@@ -1,7 +1,10 @@
 class TitleComponent < ViewComponent::Base
-  def initialize(semantic_tag: "div", size: nil)
+  def initialize(semantic_tag: "div", size: nil, scheme: nil, font: nil, bold: false)
     @semantic_tag = semantic_tag
     @size = size
+    @scheme = scheme
+    @font = font
+    @bold = bold
   end
 
   def call
@@ -9,10 +12,15 @@ class TitleComponent < ViewComponent::Base
   end
 
   def css_class
-    "title #{add_css_class_for_size}"
+    @class = "title"
+    @class += " #{size_class}" if size_class.present?
+    @class += " #{scheme_class}" if scheme_class.present?
+    @class += " #{font_class}" if font_class.present?
+    @class += " title--bold" if @bold
+    @class
   end
 
-  def add_css_class_for_size
+  def size_class
     return unless @size.present?
 
     case @size
@@ -26,6 +34,34 @@ class TitleComponent < ViewComponent::Base
       "title--xl"
     when "xxl"
       "title--xxl"
+    end
+  end
+
+  def scheme_class
+    return unless @scheme.present?
+
+    case @scheme
+    when "primary"
+      "title--primary"
+    when "secondary"
+      "title--secondary"
+    when "light"
+      "title--light"
+    when "dark"
+      "title--dark"
+    when "accent"
+      "title--accent"
+    end
+  end
+
+  def font_class
+    return unless @font.present?
+
+    case @font
+    when "sans"
+      "title--sans"
+    when "serif"
+      "title--serif"
     end
   end
 

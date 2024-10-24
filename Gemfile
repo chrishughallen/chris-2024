@@ -52,6 +52,8 @@ group :development do
   gem "web-console"
 
   gem "lookbook", ">= 2.3.3"
+  gem "listen"
+  gem "actioncable"
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [ :ruby ]

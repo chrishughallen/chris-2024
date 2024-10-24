@@ -23,3 +23,35 @@
 .title--xxl {
   font-size: 2.5rem; /* 40px */
 }
+
+.title--primary {
+  color: var(--color-primary);
+}
+
+.title--secondary {
+  color: var(--color-secondary);
+}
+
+.title--light {
+  color: var(--color-light);
+}
+
+.title--dark {
+  color: var(--color-dark);
+}
+
+.title--accent {
+  color: var(--color-accent);
+}
+
+.title--sans {
+  font-family: var(--sans-font);
+}
+
+.title--serif {
+  font-family: var(--serif-font);
+}
+
+.title--bold {
+  font-weight: bold;
+}
