@@ -6,12 +6,7 @@ main {
   padding-bottom: var(--spacing-xl);
   border-bottom: 0.0625rem solid rgba(0,0,0,0.1);
 
-  & > .title {
-    margin-bottom: var(--spacing-sm);
-    font-size: 48px;
-  }
-
-  & > p {
+  p {
     text-wrap: pretty;
 
     &:not(last-child){
