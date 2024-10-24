@@ -1,3 +1,57 @@
 .title {
   font-family: var(--font-serif);
+  line-height: 1.8;
+  font-size: 1.5rem;
+}
+
+.title--sm {
+  font-size: 1rem; /* 16px */
+}
+
+.title--md {
+  font-size: 1.25rem; /* 20px */
+}
+
+.title--lg {
+  font-size: 1.5rem; /* 24px */
+}
+
+.title--xl {
+  font-size: 2rem; /* 32px */
+}
+
+.title--xxl {
+  font-size: 2.5rem; /* 40px */
+}
+
+.title--primary {
+  color: var(--color-primary);
+}
+
+.title--secondary {
+  color: var(--color-secondary);
+}
+
+.title--light {
+  color: var(--color-light);
+}
+
+.title--dark {
+  color: var(--color-dark);
+}
+
+.title--accent {
+  color: var(--color-accent);
+}
+
+.title--sans {
+  font-family: var(--sans-font);
+}
+
+.title--serif {
+  font-family: var(--serif-font);
+}
+
+.title--bold {
+  font-weight: bold;
 }
