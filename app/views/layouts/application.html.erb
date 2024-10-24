@@ -21,7 +21,9 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+    <% unless request.path.starts_with?('/lookbook') %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
