@@ -1,5 +1,5 @@
 class TitleComponent < ViewComponent::Base
-  def initialize(semantic_tag:)
+  def initialize(semantic_tag: "div")
     @semantic_tag = semantic_tag
   end
 
