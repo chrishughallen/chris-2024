@@ -16,7 +16,7 @@ class TitleComponent < ViewComponent::Base
     @class += " #{size_class}" if size_class.present?
     @class += " #{scheme_class}" if scheme_class.present?
     @class += " #{font_class}" if font_class.present?
-    @class += " title--bold" if @bold
+    @class += " bold" if @bold
     @class
   end
 
@@ -59,9 +59,9 @@ class TitleComponent < ViewComponent::Base
 
     case @font
     when "sans"
-      "title--sans"
+      "font-sans"
     when "serif"
-      "title--serif"
+      "font-serif"
     end
   end
 
