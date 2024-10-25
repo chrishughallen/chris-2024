@@ -4,6 +4,10 @@
   transition: background 0.2s, color 0.2s, border 0.2s;
   border-radius: 4px;
   text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  font-size: 1.125rem;
+  padding: var(--spacing-sm) var(--spacing-md);
 
   &:hover {
     cursor: pointer;
@@ -64,11 +68,6 @@
     color: var(--color-light);
     border: 1px solid var(--color-dark);
   }
-}
-
-.button--default {
-  font-size: 1.125rem;
-  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .button--sm {

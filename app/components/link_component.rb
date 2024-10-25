@@ -1,7 +1,7 @@
 class LinkComponent < ViewComponent::Base
   VALID_SCHEMES = %w[primary secondary light dark accent].freeze
-  def initialize(scheme: "primary", url: nil, underline: false)
-    @scheme = validate_scheme(scheme)
+  def initialize(scheme: nil, url: nil, underline: false)
+    @scheme = validate_scheme(scheme) if scheme.present?
     @url = url
     @underline = underline
   end

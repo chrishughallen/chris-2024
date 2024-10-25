@@ -15,7 +15,7 @@ class ButtonComponentPreview < ViewComponent::Preview
   # @param type select { choices: [button, submit, reset]}
   # @param url text
   # @param size select { choices: [sm, default, lg]}
-  def button(scheme: "primary", type: "button", url: nil, size: "default")
+  def button(scheme: nil, type: "button", url: nil, size: nil)
     render(ButtonComponent.new(scheme: scheme, type: type, url: url, size: size).with_content("Click me"))
   end
 end
