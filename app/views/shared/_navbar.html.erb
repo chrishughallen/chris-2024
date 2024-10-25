@@ -1,14 +1,14 @@
 <header class="navbar">
   <nav>
-    <%= link_to "Chris Allen", root_path, class: "brand" %>
+    <%= render(LinkComponent.new(url: root_path, scheme: 'accent').with_content("Chris Allen"))%>
   </nav>
 
   <nav>
     <details>
       <summary>Menu</summary>
       <div class="nav-links">
-        <%= link_to "Chris Allen", root_path, class: "brand" %>
-        <%= link_to 'Components', '/lookbook' %>
+        <%= render(LinkComponent.new(url: root_path, scheme: 'light').with_content("Chris Allen"))%>
+        <%= render(LinkComponent.new(url: '/lookbook', scheme: 'light').with_content("Components"))%>
       </div>
     </details>
   </nav>
