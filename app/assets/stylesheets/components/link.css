@@ -1,0 +1,29 @@
+.link {
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.link--primary {
+  color: var(--color-primary);
+}
+
+.link--secondary {
+  color: var(--color-secondary);
+}
+
+.link--light {
+  color: var(--color-light);
+}
+
+.link--dark {
+  color: var(--color-dark);
+}
+
+.link--accent {
+  color: var(--color-accent);
+}

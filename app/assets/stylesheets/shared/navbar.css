@@ -17,17 +17,6 @@
 
     a {
       font-size: 20px;
-      color: var(--color-light);
-      text-decoration: none;
-      transition: opacity 0.2s ease-in-out;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &.brand {
-        font-size: 24px;
-      }
     }
 
     details {
@@ -75,10 +64,6 @@
           padding-inline: var(--spacing-lg);
           gap: var(--spacing-sm);
           margin-top: var(--spacing-lg);
-
-          a {
-            font-size: 28px;
-          }
         }
       }
     }

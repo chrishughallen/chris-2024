@@ -9,3 +9,7 @@
 .font-serif {
   font-family: var(--font-serif);
 }
+
+.underline {
+  text-decoration: underline;
+}
