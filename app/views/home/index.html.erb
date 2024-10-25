@@ -4,9 +4,6 @@
     <p>The purpose of this site is for me to continue learning my craft.</p>
     <p>This site is built with ruby on rails. I will do my best to keep it mostly free of libraries and frameworks, opting to master the basics of web development in the most vanilla way possible.</p>
     <p>The one framework i will be using is viewComponent for ruby as I find it a great way to understand how component driven web development works.</p>
+    <%= render(ButtonComponent.new(url: '/lookbook').with_content("Components"))%>
   </article>
-</main>
-
-<main>
-  <%= link_to 'Components', '/lookbook' %>
 </main>

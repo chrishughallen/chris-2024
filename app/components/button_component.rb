@@ -1,9 +1,12 @@
 class ButtonComponent < ViewComponent::Base
-  def initialize(scheme: nil, type: "button", url: nil, size: "default")
-    @scheme = scheme
+  VALID_SIZES = %w[sm lg default].freeze
+  VALID_SCHEMES = %w[primary secondary light dark accent].freeze
+
+  def initialize(scheme: "primary", type: "button", url: nil, size: "default")
+    @scheme = validate_scheme(scheme)
     @type = type
     @url = url
-    @size = size
+    @size = validate_size(size)
   end
 
   def call
@@ -49,5 +52,21 @@ class ButtonComponent < ViewComponent::Base
     when "lg"
       "button--lg"
     end
+  end
+
+  private
+
+  def validate_size(size)
+    unless VALID_SIZES.include?(size)
+      raise ArgumentError, "Invalid size: #{size}. Choose from #{VALID_SIZES.join(', ')}."
+    end
+    size
+  end
+
+  def validate_scheme(scheme)
+    unless VALID_SCHEMES.include?(scheme)
+      raise ArgumentError, "Invalid scheme: #{scheme}. Choose from #{VALID_SCHEMES.join(', ')}."
+    end
+    scheme
   end
 end
