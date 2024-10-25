@@ -2,10 +2,10 @@ class TitleComponent < ViewComponent::Base
   VALID_SIZES = %w[sm md lg xl xxl].freeze
   VALID_SCHEMES = %w[primary secondary light dark accent].freeze
 
-  def initialize(semantic_tag: "div", size: "md", scheme: nil, font: nil, bold: false)
+  def initialize(semantic_tag: "div", size: nil, scheme: nil, font: nil, bold: false)
     @semantic_tag = semantic_tag
-    @size = validate_size(size)
-    @scheme = validate_scheme(scheme)
+    @size = validate_size(size) if size.present?
+    @scheme = validate_scheme(scheme) if scheme.present?
     @font = font
     @bold = bold
   end

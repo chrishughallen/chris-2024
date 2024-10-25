@@ -1,12 +1,12 @@
 class ButtonComponent < ViewComponent::Base
-  VALID_SIZES = %w[sm lg default].freeze
+  VALID_SIZES = %w[sm lg].freeze
   VALID_SCHEMES = %w[primary secondary light dark accent].freeze
 
-  def initialize(scheme: "primary", type: "button", url: nil, size: "default")
-    @scheme = validate_scheme(scheme)
+  def initialize(scheme: "primary", type: "button", url: nil, size: nil)
+    @scheme = validate_scheme(scheme) if scheme.present?
     @type = type
     @url = url
-    @size = validate_size(size)
+    @size = validate_size(size) if size.present?
   end
 
   def call
@@ -47,8 +47,6 @@ class ButtonComponent < ViewComponent::Base
     case @size
     when "sm"
       "button--sm"
-    when "default"
-      "button--default"
     when "lg"
       "button--lg"
     end
