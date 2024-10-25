@@ -8,6 +8,8 @@
   font-family: var(--sans-font);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: var(--color-primary);
+  position: sticky;
+  top: 0;
 
   nav {
     display: flex;
@@ -15,7 +17,7 @@
 
     a {
       font-size: 20px;
-      color: var(--color-neutral-light);
+      color: var(--color-light);
       text-decoration: none;
       transition: opacity 0.2s ease-in-out;
 
@@ -31,7 +33,7 @@
     details {
       summary {
         font-size: 20px;
-        color: var(--color-neutral-light);
+        color: var(--color-light);
         cursor: pointer;
         transition: opacity 0.2s ease-in-out;
 

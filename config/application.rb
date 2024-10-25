@@ -38,5 +38,11 @@ module Chris2024
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.lookbook.project_name = "Chris-2024 Components"
+
+    config.lookbook.ui_theme_overrides = {
+      header_bg: "#03045e" # primary brand color
+    }
   end
 end
